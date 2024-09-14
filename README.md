@@ -36,6 +36,7 @@ Inside the directory, create the following Terraform files:
 main.tf: Define your resources here.
 variables.tf: Define variables for customization.
 outputs.tf: Define outputs for displaying useful information.
+
 Ans :
 
 To accomplish the task of creating an EC2 instance using Terraform, you need to create a directory terraform_challenge and inside it, write the Terraform configuration files (main.tf, variables.tf, and outputs.tf). Below is a step-by-step guide, including the Terraform code needed for each file.
@@ -45,6 +46,7 @@ cd terraform_challenge
 touch main.tf variables.tf outputs.tf
 2. main.tf - Define resources (EC2, Security Group, etc.)
 This file contains the resource definition for the EC2 instance, VPC, security group, and other necessary configurations.
+
 provider "aws" {
   region = var.aws_region
 }
@@ -138,6 +140,13 @@ output "instance_public_dns" {
   value       = aws_instance.ec2_instance.public_dns
 }
 
+5. Initialize and Apply Terraform
+   
+terraform init
+terraform plan
+terraform apply
+
+
 2.An AWS RDS MySQL database for storing application data.
 Write Terraform configuration files to provision this infrastructure.
 Requirements:
@@ -153,6 +162,7 @@ Inside the directory, create the following Terraform files:
 main.tf: Define your resources here.
 variables.tf: Define variables for customization.
 outputs.tf: Define outputs for displaying useful information.
+
 Ans:
 
 To accomplish the task of creating an Amazon RDS MySQL instance with Terraform, you will need to set up a project with the files main.tf, variables.tf, and outputs.tf. Below is the detailed code to guide you through this:
@@ -255,3 +265,8 @@ output "rds_instance_id" {
 }
 
 
+5. Initialize and Apply Terraform
+   
+terraform init
+terraform plan
+terraform apply
